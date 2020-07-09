@@ -7,11 +7,11 @@ const fetcher = (...args) => fetch(...args).then(res => res.json());
 
 export default () => {
 
-    const { data, error } = useSWR('https://wp.godavaritimes.com/wp-json/wp/v2/pages/5', fetcher)
+    const { data, error } = useSWR('http://wp.godavaritimes.com/wp-json/wp/v2/pages/5', fetcher)
 
 if (error) return <Layout><div>failed to load</div></Layout>
     if (!data) return <Layout><div>loading...</div></Layout>
-    // console.log(data[0]['post-meta-fields'].mobile_featured_image[0])
+    // console.log(data[0]['post-meta-fields'].mobile_featured_image[0]) adsfasdfadsf
     console.log(data);
     return <Layout>
 {
