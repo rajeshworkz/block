@@ -7,7 +7,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json());
 
 export default () => {
 
-    const { data, error } = useSWR('https://wp.godavaritimes.com/wp-json/wp/v2/pages/5', fetcher)
+    const { data, error } = useSWR('https://wp.godavaritimes.com/wp-json/wp/v2/pages/81', fetcher)
 
 if (error) return <Layout><div>failed to load</div></Layout>
     if (!data) return <Layout><div>loading...</div></Layout>
